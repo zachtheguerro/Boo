@@ -5,8 +5,9 @@ local games = {
     11879754496, -- Booga Void
 }
 
-if not table.find(games,game.PlaceId) then
-    return
-end
+local url = "https://raw.githubusercontent.com/zachtheguerro/Boo/refs/heads/main/Games/" .. game.PlaceId
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/zachtheguerro/Boo/refs/heads/main/Games/" .. games[game.PlaceId]))()
+local ok, content = pcall(game.HttpGet, game, url)
+if not ok or not content or content == "" then return end
+
+loadstring(content)()
