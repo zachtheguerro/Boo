@@ -1,12 +1,12 @@
 if not lp_key then return end
 
 local games = {
-    [11729688377] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga OW
-    [11879754496] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga Void
+    11729688377, -- Booga OW
+    11879754496, -- Booga Void
 }
 
 if not games[game.PlaceId] then
     return
 end
 
-loadstring(game:HttpGet(games[game.PlaceId]))()
+loadstring(game:HttpGet(https://raw.githubusercontent.com/zachtheguerro/Boo/refs/heads/main/Games/ .. games[game.PlaceId]))()
