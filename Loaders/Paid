@@ -7,7 +7,7 @@ if not LPH_OBFUSCATED then
 end
 
 local games = {
-    [11729688377] = "https://luaprot.net/api/vwhats 2/loaders/get/99789352167974487639", -- Booga OW
+    [11729688377] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga OW
     [11879754496] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga Void
 }
 
