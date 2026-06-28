@@ -5,8 +5,8 @@ local games = {
     11879754496, -- Booga Void
 }
 
-if not games[game.PlaceId] then
+if not table.find(games,game.PlaceId) then
     return
 end
 
-loadstring(game:HttpGet(https://raw.githubusercontent.com/zachtheguerro/Boo/refs/heads/main/Games/ .. games[game.PlaceId]))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/zachtheguerro/Boo/refs/heads/main/Games/" .. games[game.PlaceId]))()
