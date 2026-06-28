@@ -15,7 +15,7 @@ local games = {
 }
 
 LP_INIT(function()
-    if not table.find(games, game.PlaceId) then
+    if not games[game.PlaceId] then
         while true do
             task.wait(9e9)
         end
