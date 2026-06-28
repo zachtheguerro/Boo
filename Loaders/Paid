@@ -1,22 +1,12 @@
 if not lp_key then return end
 
-if not LPH_OBFUSCATED then
-    LP_INIT           = function(...) return ... end
-
-    LPH_OBFUSCATED    = false;
-end
-
 local games = {
     [11729688377] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga OW
     [11879754496] = "https://luaprot.net/api/v2/loaders/get/99789352167974487639", -- Booga Void
 }
 
-LP_INIT(function()
-    if not games[game.PlaceId] then
-        while true do
-            task.wait(9e9)
-        end
-    end
-end)
+if not games[game.PlaceId] then
+    return
+end
 
 loadstring(game:HttpGet(games[game.PlaceId]))()
